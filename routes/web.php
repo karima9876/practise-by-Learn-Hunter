@@ -17,11 +17,21 @@ Route::get('/', function () {
     //dd(app());
     return view('welcome');
 });
+//Route::get('/', function () {
+////    cache()->put('hello','world');
+////    dd(cache()->get('hello'));
+//      Cache::put('hello','world');
+//      dd(cache()->get('hello'));
+//});
 Route::get('/test', function () {
     app()->make('first_service_helper');
 });
 Route::get('/test-one', function () {
     return "Test";
+});
+Route::get('/test-two', function () {
+    //Hunter::test();
+    Hunter::test_one();
 });
 
 Route::get('/dashboard', function () {
